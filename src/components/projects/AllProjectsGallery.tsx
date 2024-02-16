@@ -4,6 +4,7 @@ import { rotateImage } from "@/utils/rotateImage";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
+import { ImageFrame } from "../ui/ImageFrame";
 
 export const AllProjectsGallery = () => {
   return (
@@ -19,7 +20,7 @@ export const AllProjectsGallery = () => {
             <div className="self-center bg-black p-2 font-medium uppercase text-white md:p-4">
               {name}
             </div>
-            <div className="-mt-2 border-8 border-black bg-white p-2 md:p-4">
+            <ImageFrame className="-mt-2">
               <Image
                 src={`/images/projects/${id}/featured.jpg`}
                 alt={"we"}
@@ -27,7 +28,7 @@ export const AllProjectsGallery = () => {
                 height={400}
                 className="h-auto w-full"
               />
-            </div>
+            </ImageFrame>
           </Link>
         );
       })}

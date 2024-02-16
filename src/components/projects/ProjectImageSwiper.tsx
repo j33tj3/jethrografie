@@ -4,6 +4,7 @@ import Image from "next/image";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperNavigation } from "../ui/SwiperNavigation";
+import { ImageFrame } from "../ui/ImageFrame";
 
 export const ProjectImageSwiper = ({
   id,
@@ -30,14 +31,16 @@ export const ProjectImageSwiper = ({
                 key={key}
                 className="!flex !h-auto w-full items-center justify-center px-2 sm:px-0 md:!w-auto"
               >
-                <Image
-                  priority={key === 0}
-                  src={`/images/projects/${id}/${image.file}.jpg`}
-                  width={image.horizontal ? 900 : 400}
-                  height={600}
-                  alt=""
-                  className="border-8 border-black bg-white object-cover p-2 sm:p-4 md:h-[600px]  "
-                />
+                <ImageFrame>
+                  <Image
+                    priority={key === 0}
+                    src={`/images/projects/${id}/${image.file}.jpg`}
+                    width={image.horizontal ? 900 : 400}
+                    height={600}
+                    alt=""
+                    className="object-cover md:h-[600px]"
+                  />
+                </ImageFrame>
               </SwiperSlide>
             );
           })}

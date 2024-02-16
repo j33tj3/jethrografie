@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { ImageFrame } from "../ui/ImageFrame";
 
 export const WelcomeSection = () => {
   return (
@@ -22,14 +23,14 @@ export const WelcomeSection = () => {
             form.
           </p>
         </div>
-        <div className=" -mt-6 h-min shrink-0 -rotate-1 border-8 border-black bg-white p-2 md:mt-0 md:rotate-1 md:p-4">
+        <ImageFrame className="-mt-6 h-min shrink-0 -rotate-1 md:mt-0 md:rotate-1">
           <Image
             src={"/images/home/welcome/1.jpg"}
             width="480"
             height="320"
             alt={""}
           />
-        </div>
+        </ImageFrame>
       </div>
     </div>
   );

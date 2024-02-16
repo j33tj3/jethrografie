@@ -7,6 +7,7 @@ import "swiper/css";
 import { twMerge } from "tailwind-merge";
 import { rotateImage } from "@/utils/rotateImage";
 import { SwiperNavigation } from "../ui/SwiperNavigation";
+import { ImageFrame } from "../ui/ImageFrame";
 
 const images = require.context(
   "../../../public/images/home/highlights",
@@ -46,27 +47,18 @@ type HighlightedSlideProps = {
 };
 
 const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide, index }) => {
-  const [slideClass, setSlideClass] = useState<string>("");
-  useEffect(() => {
-    setSlideClass(
-      twMerge(
-        "border-8 border-black bg-white p-2  md:p-4 w-[280px] md:w-[400px]",
-        rotateImage(3),
-      ),
-    );
-  }, []);
   return (
     <SwiperSlide className="!w-auto">
-      <div>
+      <ImageFrame className={rotateImage(3)}>
         <Image
           src={url}
           width={400}
           height={600}
           alt={`${slide}`}
           priority={index === 0 || index === imageList.length / 2}
-          className={slideClass}
+          className="w-[280px] md:w-[400px]"
         />
-      </div>
+      </ImageFrame>
     </SwiperSlide>
   );
 };

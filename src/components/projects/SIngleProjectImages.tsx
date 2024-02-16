@@ -19,23 +19,15 @@ export const SingleProjectImages = ({ projectId }: { projectId: string }) => {
     return;
   }
 
+  const { id, name, images } = projectData;
+
   return (
     <>
       <div className="m-auto w-full max-w-5xl">
-        <h1 className="text-center text-3xl font-bold uppercase">
-          {projectData.name}
-        </h1>
+        <h1 className="text-center text-3xl font-bold uppercase">{name}</h1>
       </div>
-      <ProjectImageGrid
-        className="md:hidden"
-        id={projectData.id}
-        images={projectData.images}
-      />
-      <ProjectImageSwiper
-        className="hidden md:block"
-        id={projectData.id}
-        images={projectData.images}
-      />
+      <ProjectImageGrid className="md:hidden" id={id} images={images} />
+      <ProjectImageSwiper className="hidden md:block" id={id} images={images} />
     </>
   );
 };

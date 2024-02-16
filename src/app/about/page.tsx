@@ -1,3 +1,4 @@
+import { ImageFrame } from "@/components/ui/ImageFrame";
 import { rotateImage } from "@/utils/rotateImage";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -80,17 +81,14 @@ type AboutImageProps = {
 
 const AboutImage: FC<AboutImageProps> = ({ number }) => {
   return (
-    <div className="">
+    <ImageFrame notResponsive className={twMerge("", rotateImage())}>
       <Image
         src={`/images/home/highlights/${number}.jpg`}
         alt=""
-        className={twMerge(
-          "aspect-[2/3] w-full border-8 border-black bg-gray-900/5 bg-white object-cover p-2 shadow-lg",
-          rotateImage(),
-        )}
+        //aspect-[2/3] w-full object-cover
         width="176"
         height="264"
       />
-    </div>
+    </ImageFrame>
   );
 };
