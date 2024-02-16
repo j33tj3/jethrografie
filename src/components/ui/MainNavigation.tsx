@@ -1,0 +1,42 @@
+"use client";
+import Link from "next/link";
+import { Logo } from "../branding/Logo";
+import { usePathname } from "next/navigation";
+import { twMerge } from "tailwind-merge";
+
+const routes = [
+  { path: "/", label: "Thuis" },
+  { path: "/about", label: "Over mij" },
+  { path: "/projects", label: "Projecten" },
+  { path: "/contact", label: "contact" },
+];
+
+export const MainNavigation = () => {
+  const pathName = usePathname();
+  return (
+    <nav
+      id="main-navigation"
+      className="sticky top-0 flex justify-center bg-white p-4 dark:bg-black"
+    >
+      <div className="flex w-full max-w-5xl justify-between">
+        <Link href={"/#top"}>
+          <Logo className="h-16 fill-black dark:fill-white" />
+        </Link>
+        <div className="flex items-center gap-x-2">
+          {routes.map((e, i) => (
+            <Link
+              key={i}
+              href={e.path === "/" ? "/#top" : e.path}
+              className={twMerge(
+                "pb-1 uppercase",
+                pathName === e.path && "border-b-2 border-black",
+              )}
+            >
+              {e.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </nav>
+  );
+};

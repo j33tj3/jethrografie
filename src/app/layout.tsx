@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { Mohave } from "next/font/google";
 import "./globals.css";
 import { SplashSlider } from "@/components/home/SplashSlider";
-import { MainNavigation } from "@/components/navigation/MainNavigation";
+import { MainNavigation } from "@/components/ui/MainNavigation";
+import { Footer } from "@/components/ui/Footer";
 
 const mohaveFonts = Mohave({
   weight: ["300", "400", "700"],
+  style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-mohave",
 });
@@ -26,6 +28,7 @@ export default function RootLayout({
         <SplashSlider />
         <MainNavigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

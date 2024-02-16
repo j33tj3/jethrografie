@@ -28,7 +28,7 @@ export const SplashSlider = () => {
 
   return (
     <div
-      className="relative flex items-center justify-center dark:bg-black bg-white"
+      className="relative flex items-center justify-center bg-white dark:bg-black"
       id="top"
     >
       <Swiper
@@ -47,27 +47,29 @@ export const SplashSlider = () => {
       </Swiper>
       <motion.button
         onClick={scrollToNav}
-        className="z-10 bg-black/50 border-2 p-4 absolute text-white dark:text-black"
+        className="absolute z-10 border-2 bg-white p-0.5 dark:text-black"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
-        <motion.div
-          className="w-6 h-6"
-          animate={{
-            y: ["0px", "8px", "-8px", "4px", "0px"],
-          }}
-          transition={{
-            y: {
-              duration: 0.5,
-              repeat: Infinity,
-              ease: "easeOut",
-              repeatType: "loop",
-              repeatDelay: 1,
-            },
-          }}
-        >
-          <ChevronDoubleDownIcon className="w-full h-full fill-black dark:fill-white" />
-        </motion.div>
+        <div className="border-2 border-black p-4">
+          <motion.div
+            className="h-6 w-6"
+            animate={{
+              y: ["0px", "8px", "-8px", "4px", "0px"],
+            }}
+            transition={{
+              y: {
+                duration: 0.5,
+                repeat: Infinity,
+                ease: "easeOut",
+                repeatType: "loop",
+                repeatDelay: 1,
+              },
+            }}
+          >
+            <ChevronDoubleDownIcon className="h-full w-full fill-black dark:fill-white" />
+          </motion.div>
+        </div>
       </motion.button>
     </div>
   );
@@ -85,7 +87,7 @@ const SwiperItem: FC<SwiperItemProps> = ({ slide }) => {
         width={1920}
         height={1080}
         alt={`${slide}`}
-        className="block w-full h-full object-cover"
+        className="block h-full w-full object-cover"
       />
     </SwiperSlide>
   );
