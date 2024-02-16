@@ -1,22 +1,11 @@
 "use client";
-import { projects } from "@/data/projectsData";
+import { projects, ProjectData } from "@/data/projectsData";
 import { rotateImage } from "@/utils/rotateImage";
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 import Image from "next/image";
 
-export interface ProjectData {
-  name: string;
-  id: string;
-  images: ProjectImages[];
-}
-
-export interface ProjectImages {
-  file: string;
-  horizontal: boolean;
-}
-
-export const ProjectsGallery = () => {
+export const AllProjectsGallery = () => {
   return (
     <div className="grid gap-8 md:grid-cols-2">
       {projects.map((project: ProjectData, index: number) => {

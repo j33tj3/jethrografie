@@ -59,3 +59,14 @@ export const projectIds = projects.find((obj) => {
 });
 
 export type Projects = typeof projectIds;
+
+export interface ProjectData {
+  name: string;
+  id: string;
+  images: ProjectImages[];
+}
+
+export interface ProjectImages {
+  file: string;
+  horizontal: boolean;
+}

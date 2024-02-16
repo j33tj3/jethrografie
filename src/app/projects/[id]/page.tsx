@@ -1,6 +1,7 @@
-import { ProjectGallery } from "@/components/projects/ProjectGallery";
+import { ProjectImageGrid } from "@/components/projects/ProjectImageGrid";
+import { ProjectImageSwiper } from "@/components/projects/ProjectImageSwiper";
+import { SingleProjectImages } from "@/components/projects/SIngleProjectImages";
 import { projects } from "@/data/projectsData";
-import { Metadata } from "next";
 
 export async function generateMetadata({ params }: { params: any }) {
   const pageData = projects.find((obj) => {
@@ -28,9 +29,9 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="flex justify-center px-4">
-      <div className="pb-32 pt-12">
-        <ProjectGallery projectId={params.id} />
+    <div className="flex justify-center">
+      <div className="px-4 py-12">
+        <SingleProjectImages projectId={params.id} />
       </div>
     </div>
   );

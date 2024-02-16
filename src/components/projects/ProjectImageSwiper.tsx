@@ -1,23 +1,21 @@
 "use client";
-import { projects } from "@/data/projectsData";
+import { ProjectImages } from "@/data/projectsData";
 import Image from "next/image";
-import { ProjectData } from "./ProjectsGallery";
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperNavigation } from "../ui/SwiperNavigation";
 
-export const ProjectGallery = ({ projectId }: { projectId: string }) => {
-  const project = projects.find((obj) => {
-    return obj.id === projectId;
-  });
-  const { id, name, images } = project as ProjectData;
-
+export const ProjectImageSwiper = ({
+  id,
+  images,
+  className,
+}: {
+  id: string;
+  images: ProjectImages[];
+  className: string;
+}) => {
   return (
-    <div>
-      <div className="m-auto w-full max-w-5xl px-4">
-        <h1 className="text-3xl font-bold uppercase">{name}</h1>
-      </div>
-
+    <div className={className}>
       <div className="flex w-screen flex-col justify-center gap-y-12 py-12">
         <Swiper
           slidesPerView={"auto"}
@@ -38,7 +36,7 @@ export const ProjectGallery = ({ projectId }: { projectId: string }) => {
                   width={image.horizontal ? 900 : 400}
                   height={600}
                   alt=""
-                  className="border-8   border-black bg-white object-cover p-2 sm:p-4 md:h-[600px]  "
+                  className="border-8 border-black bg-white object-cover p-2 sm:p-4 md:h-[600px]  "
                 />
               </SwiperSlide>
             );
