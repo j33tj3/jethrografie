@@ -16,7 +16,7 @@ export const MainNavigation = () => {
   return (
     <nav
       id="main-navigation"
-      className="sticky top-0 flex justify-center bg-white p-4 dark:bg-black"
+      className="sticky top-0 z-10 flex justify-center bg-white p-4 dark:bg-black"
     >
       <div className="flex w-full max-w-5xl justify-between">
         <Link href={"/#top"}>
