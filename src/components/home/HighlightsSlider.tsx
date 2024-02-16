@@ -8,14 +8,14 @@ import { twMerge } from "tailwind-merge";
 import { rotateImage } from "@/utils/rotateImage";
 import { SwiperNavigation } from "../ui/SwiperNavigation";
 
-export const HighlightsSlider = () => {
-  const images = require.context(
-    "../../../public/images/home/highlights",
-    true,
-    /\.(jpe?g)$/,
-  );
-  const imageList = images.keys().map((image) => images(image));
+const images = require.context(
+  "../../../public/images/home/highlights",
+  true,
+  /\.(jpe?g)$/,
+);
+const imageList = images.keys().map((image) => images(image));
 
+export const HighlightsSlider = () => {
   return (
     <div className="relative flex w-screen flex-col justify-center gap-y-12 py-12">
       <Swiper
@@ -63,7 +63,7 @@ const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide, index }) => {
           width={400}
           height={600}
           alt={`${slide}`}
-          priority={index === 0}
+          priority={index === 0 || index === imageList.length / 2}
           className={slideClass}
         />
       </div>

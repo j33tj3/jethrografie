@@ -52,12 +52,14 @@ export const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
       <FormField label="Naam" register="name">
         <ContactFormItem
           type="text"
+          id="name"
           placeholder="Naam"
           {...register("name", {
             required: "Wees niet verlegen...",
             pattern: /^[A-Za-z]+$/i,
           })}
           aria-invalid={errors.name ? "true" : "false"}
+          autoComplete="given-name"
         />
         {errors.name && <InputError message={errors.name.message} />}
       </FormField>
@@ -65,11 +67,13 @@ export const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
       <FormField label="E-mailadres" register="email">
         <ContactFormItem
           type="email"
+          id="email"
           placeholder="jouw@email.nl"
           {...register("email", {
             required: "Stay connected...",
           })}
           aria-invalid={errors.email ? "true" : "false"}
+          autoComplete="email"
         />
         {errors.email && <InputError message={errors.email?.message} />}
       </FormField>
@@ -77,6 +81,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
       <FormField label="E-mailadres" register="message">
         <ContactFormItem
           component="textarea"
+          id="message"
           rows={4}
           placeholder="Vertel..."
           {...register("message", {
