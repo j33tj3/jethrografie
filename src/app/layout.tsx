@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Mohave } from "next/font/google";
 import "./globals.css";
 import { SplashSlider } from "@/components/home/SplashSlider";
 import { MainNavigation } from "@/components/navigation/MainNavigation";
 
-const inter = Inter({ subsets: ["latin"] });
+const mohaveFonts = Mohave({
+  weight: ["300", "400", "700"],
+  subsets: ["latin"],
+  variable: "--font-mohave",
+});
 
 export const metadata: Metadata = {
   title: "Jethrografie",
@@ -17,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" style={{ height: "100%" }}>
+      <body className={mohaveFonts.className}>
         <SplashSlider />
         <MainNavigation />
         {children}
