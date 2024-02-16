@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
+import { SplashSlider } from "@/components/home/SplashSlider";
+import { MainNavigation } from "@/components/navigation/MainNavigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,16 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav>
-          <div>
-            <Link href={"/"}>Home</Link>
-          </div>
-          <div>
-            <Link href={"/about"}>About</Link>
-            <Link href={"/projects"}>Projects</Link>
-            <Link href={"/contact"}>Contact</Link>
-          </div>
-        </nav>
+        <SplashSlider />
+        <MainNavigation />
         {children}
       </body>
     </html>

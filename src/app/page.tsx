@@ -1,7 +1,12 @@
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      home
-    </main>
+    <>
+      <p className="h-screen">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate
+        placeat dolorum, rem quasi vel quas earum tenetur aut, facilis porro
+        repudiandae itaque dolor maiores. Facere cupiditate iste in molestiae
+        numquam.
+      </p>
+    </>
   );
 }
