@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Mohave } from "next/font/google";
 import "./globals.css";
-import { MainNavigation } from "@/components/ui/MainNavigation";
+import { MainNavigation } from "@/components/ui/mainNavigation/MainNavigation";
 import { Footer } from "@/components/ui/Footer";
 import { twMerge } from "tailwind-merge";
 
@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           mohaveFonts.className,
-          "flex h-screen flex-col overflow-auto dark:bg-black",
+          "relative flex h-screen flex-col overflow-auto dark:bg-black",
         )}
       >
         <MainNavigation />
