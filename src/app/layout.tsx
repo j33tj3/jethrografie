@@ -41,11 +41,11 @@ export default function RootLayout({
       <body
         className={twMerge(
           mohaveFonts.className,
-          "relative flex h-screen flex-col overflow-auto dark:bg-black",
+          "flex h-screen flex-col overflow-auto dark:bg-black",
         )}
       >
         <MainNavigation />
-        <main className="relative grow">{children}</main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>

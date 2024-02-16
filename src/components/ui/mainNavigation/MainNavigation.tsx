@@ -39,7 +39,12 @@ export const MainNavigation = () => {
         className="top-0 z-30 flex w-full justify-center self-start p-4"
       >
         <div className="flex w-full max-w-5xl items-center justify-between">
-          <Link href={"/"}>
+          <Link
+            href={"/"}
+            onClick={() => {
+              isOpen && toggleOpen();
+            }}
+          >
             <Logo className="h-16 fill-black dark:fill-white" />
           </Link>
           <div className="pr-2 md:hidden">
