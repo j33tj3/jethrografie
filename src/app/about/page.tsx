@@ -1,7 +1,12 @@
 import { rotateImage } from "@/utils/rotateImage";
+import { Metadata } from "next";
 import Image from "next/image";
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";
+
+export const metadata: Metadata = {
+  title: "Jethrografie - Over mij",
+};
 
 export default function AboutMePage() {
   return (

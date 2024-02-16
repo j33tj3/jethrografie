@@ -1,17 +1,21 @@
 import { ProjectGallery } from "@/components/projects/ProjectGallery";
 import { projects } from "@/data/projectsData";
-// import { useState } from "react";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: any }) {
+  const pageData = projects.find((obj) => {
+    return (obj.id = params.id);
+  });
+  // fix any
+  return {
+    title: `Jethrografie - Project: ${pageData?.name}`,
+  };
+}
 
 export async function generateStaticParams() {
   return projects.map((project) => {
     return { id: project.id };
   });
-}
-
-interface ProjectPageData {
-  id: string;
-  name: string;
-  description: string;
 }
 
 export default function ProjectPage({ params }: { params: { id: string } }) {

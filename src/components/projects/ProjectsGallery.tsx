@@ -28,10 +28,10 @@ export const ProjectsGallery = () => {
             className={twMerge("flex flex-col justify-center", rotateImage(2))}
             href={`/projects/${id}`}
           >
-            <div className="self-center bg-black p-4 font-medium uppercase text-white">
+            <div className="self-center bg-black p-2 font-medium uppercase text-white md:p-4">
               {name}
             </div>
-            <div className="-mt-2 border-8 border-black bg-white p-4">
+            <div className="-mt-2 border-8 border-black bg-white p-2 md:p-4">
               <Image
                 src={`/images/projects/${id}/featured.jpg`}
                 alt={"we"}

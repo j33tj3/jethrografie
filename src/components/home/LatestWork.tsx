@@ -6,7 +6,7 @@ import Link from "next/link";
 export const LatestWork = () => {
   return (
     <div className="flex flex-col items-center px-4 py-12">
-      <h2 className="-mb-1 border-4 border-black bg-white p-4 text-2xl font-bold">
+      <h2 className="-mb-1 border-4 border-black bg-white p-2 text-2xl font-bold md:p-4">
         laatste project
       </h2>
       <div className="w-full max-w-3xl border-8 border-black bg-white p-2 md:p-4">
@@ -18,7 +18,7 @@ export const LatestWork = () => {
           className="h-auto w-full"
         />
       </div>
-      <div className="-mt-1 border-4 border-black bg-white p-4 text-2xl font-bold">
+      <div className="-mt-1 border-4 border-black bg-white p-2 text-xl font-bold uppercase md:p-4 md:text-2xl">
         <Link href="/projects/vpbijlmermeer">
           Verloskundigenpraktijk Bijlmermeer
         </Link>

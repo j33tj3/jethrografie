@@ -1,10 +1,15 @@
 import { ContactForm } from "@/components/contact/ContactForm";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Jethrografie - Contact",
+};
 
 export default function ContactMePage() {
   return (
     <div className="flex justify-center px-4">
-      <div className="flex w-full max-w-5xl flex-1 gap-x-9 pb-32 pt-12">
+      <div className="flex w-full max-w-5xl flex-1 gap-x-9 py-12">
         <div className="mt-7 hidden -rotate-1 md:block">
           <div className=" border-8 border-black bg-white p-4">
             <Image

@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { projects } from "@/data/projectsData";
-import { twMerge } from "tailwind-merge";
-import { rotateImage } from "@/utils/rotateImage";
-import Link from "next/link";
 import { ProjectsGallery } from "@/components/projects/ProjectsGallery";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Jethrografie - Projecten",
+};
 
 export default function ProjectsPage() {
   return (

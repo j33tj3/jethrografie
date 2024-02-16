@@ -14,7 +14,7 @@ const mohaveFonts = Mohave({
 
 export const metadata: Metadata = {
   title: "Jethrografie",
-  description: "Photography portfolio",
+  description: "Portfolio van Jethrografie",
   icons: {
     icon: "./icon.png",
   },

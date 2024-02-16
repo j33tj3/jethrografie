@@ -19,14 +19,14 @@ export const MainNavigation = () => {
       className="top-0 z-10 flex w-full justify-center self-start p-4"
     >
       <div className="flex w-full max-w-5xl justify-between">
-        <Link href={"/#top"}>
+        <Link href={"/"}>
           <Logo className="h-16 fill-black dark:fill-white" />
         </Link>
         <div className="flex items-center gap-x-2">
           {routes.map((e, i) => (
             <Link
               key={i}
-              href={e.path === "/" ? "/#top" : e.path}
+              href={e.path === "/" ? "/" : e.path}
               className={twMerge(
                 "pb-1 uppercase",
                 pathName === e.path && "border-b-2 border-black",

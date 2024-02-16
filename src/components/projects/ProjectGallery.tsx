@@ -14,7 +14,7 @@ export const ProjectGallery = ({ projectId }: { projectId: string }) => {
 
   return (
     <div>
-      <div className="m-auto flex w-full max-w-5xl flex-col gap-y-6">
+      <div className="m-auto w-full max-w-5xl px-4">
         <h1 className="text-3xl font-bold uppercase">{name}</h1>
       </div>
 
