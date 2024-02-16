@@ -15,6 +15,9 @@ const mohaveFonts = Mohave({
 export const metadata: Metadata = {
   title: "Jethrografie",
   description: "Photography portfolio",
+  icons: {
+    icon: "./icon.png",
+  },
 };
 
 export default function RootLayout({

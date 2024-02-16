@@ -50,7 +50,7 @@ const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide }) => {
         alt={`${slide}`}
         className={twMerge(
           "block h-full w-auto border-8 border-black bg-white object-cover p-4",
-          rotateImage(),
+          rotateImage(3),
         )}
       />
     </SwiperSlide>

@@ -1,4 +1,12 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    // unoptimized: true,
+  },
+  // output: "export",
+  // trailingSlash: true,
+  // skipTrailingSlashRedirect: true,
+  // assetPrefix: "./",
+};
 
 module.exports = nextConfig;

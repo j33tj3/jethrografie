@@ -1,17 +1,11 @@
-import { ProjectsGallery } from "@/components/projects/ProjectsGallery";
-import { projects } from "../projectsData";
-import { useState } from "react";
+import { ProjectGallery } from "@/components/projects/ProjectGallery";
+import { projects } from "@/data/projectsData";
+// import { useState } from "react";
 
 export async function generateStaticParams() {
-  return [
-    // projects.map((project) => {
-    //   return { id: project.id };
-    // }),
-    { id: "preggylicious" },
-    { id: "apceramics" },
-    { id: "fcvandams" },
-    { id: "vpbijlmermeer" },
-  ];
+  return projects.map((project) => {
+    return { id: project.id };
+  });
 }
 
 interface ProjectPageData {
@@ -29,5 +23,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     return;
   }
 
-  return <>{params.id}</>;
+  return (
+    <div className="flex justify-center px-4">
+      <div className="pb-32 pt-12">
+        <ProjectGallery projectId={params.id} />
+      </div>
+    </div>
+  );
 }
