@@ -16,7 +16,18 @@ export const metadata: Metadata = {
   title: "Jethrografie",
   description: "Portfolio van Jethrografie",
   icons: {
-    icon: "./icon.png",
+    icon: [
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/images/favicon-light-theme.png",
+        href: "/images/favicon-light-theme.png",
+      },
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/images/favicon-dark-theme.png",
+        href: "/images/favicon-dark-theme.png",
+      },
+    ],
   },
 };
 
@@ -34,7 +45,7 @@ export default function RootLayout({
         )}
       >
         <MainNavigation />
-        <main className="grow">{children}</main>
+        <main className="relative grow">{children}</main>
         <Footer />
       </body>
     </html>

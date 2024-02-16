@@ -18,7 +18,7 @@ export const ContactFormItem: React.FC<ContactFormItemProps> = React.forwardRef(
     return (
       <Component
         ref={ref as React.ForwardedRef<HTMLInputElement & HTMLTextAreaElement>}
-        className="w-full rounded-es-lg border-4 border-gray-700 bg-white p-3 text-base font-medium text-black outline-none focus:shadow-md focus:outline-4"
+        className="w-full rounded-es-lg border-4 border-black bg-white p-3 text-base font-medium outline-none focus:shadow-md focus:outline-4 dark:border-white dark:bg-black"
         {...(props as InputProps & TextareaProps)}
       />
     );

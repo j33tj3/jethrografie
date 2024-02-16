@@ -57,7 +57,7 @@ export const MainNavigation = () => {
             initial="initial"
             animate="enter"
             exit="exit"
-            className="absolute left-0 top-0 z-20 flex h-screen w-screen flex-col items-center justify-center gap-y-12 bg-white pt-24 md:hidden"
+            className="absolute left-0 top-0 z-20 flex h-screen w-screen flex-col items-center justify-center gap-y-12 bg-white pt-24 dark:bg-black md:hidden"
           >
             <Links className="text-xl" onClick={() => toggleOpen()} isMobile />
           </motion.div>

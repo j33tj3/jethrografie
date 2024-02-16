@@ -15,7 +15,7 @@ export const FormField: React.FC<FormFieldProps> = ({
     <div className="flex flex-col gap-y-3">
       <label
         htmlFor={register}
-        className="block text-base font-bold uppercase text-black"
+        className="block text-base font-bold uppercase text-black dark:text-white"
       >
         {label}
       </label>

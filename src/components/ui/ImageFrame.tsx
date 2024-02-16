@@ -15,7 +15,7 @@ export const ImageFrame: React.FC<ImageFrameProps> = ({
   useEffect(() => {
     setSlideClass(
       twMerge(
-        "border-8 border-black bg-white p-2 shadow-lg shadow-black/10 [*>img]:shadow-inner",
+        "border-8 border-black dark:border-white dark:bg-black bg-white p-2 shadow-lg shadow-black/10 [*>img]:shadow-inner",
         !notResponsive && "md:p-4 md:shadow-2xl md:shadow-black/10",
         className,
       ),

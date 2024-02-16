@@ -7,7 +7,7 @@ import { ImageFrame } from "../ui/ImageFrame";
 export const LatestWork = () => {
   return (
     <div className="flex flex-col items-center px-4 py-12">
-      <h2 className="-mb-1 border-4 border-black bg-white p-2 text-2xl font-bold md:p-4">
+      <h2 className="-mb-1 border-4 border-black bg-white p-2 text-2xl font-bold dark:border-white dark:bg-black md:p-4">
         laatste project
       </h2>
       <ImageFrame className="w-full max-w-3xl">
@@ -19,7 +19,7 @@ export const LatestWork = () => {
           className="h-auto w-full"
         />
       </ImageFrame>
-      <div className="-mt-1 border-4 border-black bg-white p-2 text-xl font-bold uppercase md:p-4 md:text-2xl">
+      <div className="-mt-1 border-4 border-black bg-white p-2 text-xl font-bold uppercase dark:border-white dark:bg-black md:p-4 md:text-2xl">
         <Link href="/projects/vpbijlmermeer">
           Verloskundigenpraktijk Bijlmermeer
         </Link>

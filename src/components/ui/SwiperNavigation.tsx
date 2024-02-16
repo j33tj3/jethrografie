@@ -22,7 +22,7 @@ const SwiperNavigationButton: React.FC<SwiperNavigationButtonProps> = ({
 }) => {
   const isLeft = direction === "left";
   const buttonClass = twMerge(
-    "md:absolute md:top-1/2 z-10 md:-mt-[22px] border-[6px] border-black bg-white",
+    "md:absolute md:top-1/2 z-10 md:-mt-[22px] border-[6px] border-black bg-white dark:border-white dark:bg-black",
     isLeft ? "left-4" : "right-4",
   );
   const swiper = useSwiper();
@@ -36,9 +36,9 @@ const SwiperNavigationButton: React.FC<SwiperNavigationButtonProps> = ({
       whileTap={{ scale: 0.95 }}
     >
       {isLeft ? (
-        <ChevronLeftIcon className="h-8 w-8" />
+        <ChevronLeftIcon className="h-8 w-8 dark:fill-white" />
       ) : (
-        <ChevronRightIcon className="h-8 w-8" />
+        <ChevronRightIcon className="h-8 w-8 dark:fill-white" />
       )}
     </motion.button>
   );

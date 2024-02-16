@@ -92,7 +92,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
         {errors.message && <InputError message={errors.message.message} />}
       </FormField>
 
-      <button className="hover:shadow-form bg-black p-4 text-base font-semibold uppercase text-white outline-none">
+      <button className="hover:shadow-form bg-black p-4 text-base font-semibold uppercase text-white outline-none dark:bg-white dark:text-black">
         Verzenden
       </button>
 

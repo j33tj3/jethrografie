@@ -84,10 +84,10 @@ const Line = (
     <motion.line
       style={{
         fill: "none",
-        stroke: "#000",
         strokeMiterlimit: "10",
         strokeWidth: "4px",
       }}
+      className="stroke-black dark:stroke-white"
       initial={{ pathLength: 0 }}
       animate={{ pathLength: 1 }}
       {...props}

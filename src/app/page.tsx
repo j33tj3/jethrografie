@@ -7,7 +7,7 @@ export default function Home() {
     <>
       {/* background stains - start */}
       <div
-        className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl"
+        className="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl dark:opacity-60"
         aria-hidden="true"
       >
         <div
@@ -26,7 +26,7 @@ export default function Home() {
 
       {/* background stains - start */}
       <div
-        className="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/4 transform-gpu overflow-hidden blur-3xl sm:block"
+        className="absolute left-0 right-0 top-full -z-10 -mt-[500px] w-full -translate-y-1/4 transform-gpu justify-center overflow-hidden blur-3xl dark:opacity-50 sm:flex"
         aria-hidden="true"
       >
         <div

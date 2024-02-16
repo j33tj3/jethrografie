@@ -11,7 +11,7 @@ export default function ContactMePage() {
   return (
     <div className="flex justify-center px-4">
       <div className="flex w-full max-w-5xl gap-x-9 py-12">
-        <div className="mt-7 hidden -rotate-1 md:block  md:basis-1/2">
+        <div className="mt-7 hidden -rotate-1 md:block md:basis-1/2">
           <ImageFrame>
             <Image
               src={"/images/home/highlights/1.jpg"}
@@ -26,7 +26,7 @@ export default function ContactMePage() {
       </div>
       {/* background stains - start */}
       <div
-        className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end"
+        className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 transform-gpu justify-center overflow-hidden blur-3xl dark:opacity-70 sm:bottom-0 sm:right-[calc(50%-6rem)] sm:top-auto sm:translate-y-0 sm:transform-gpu sm:justify-end"
         aria-hidden="true"
       >
         <div

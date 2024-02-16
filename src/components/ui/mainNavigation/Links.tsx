@@ -55,7 +55,7 @@ export const Links = ({
         {route.label}
         {pathName === route.path && (
           <motion.div
-            className="absolute bottom-0 left-0 right-0 hidden h-0.5 bg-black md:block"
+            className="absolute bottom-0 left-0 right-0 hidden h-0.5 bg-black dark:bg-white md:block"
             layoutId="underline"
           />
         )}

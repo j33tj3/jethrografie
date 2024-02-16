@@ -13,7 +13,7 @@ export default function ProjectsPage() {
 
         {/* background stains - start */}
         <div
-          className="absolute left-1/2 right-0 top-full -z-10 hidden -translate-y-1/2 transform-gpu overflow-hidden blur-3xl sm:block"
+          className="first-letter: absolute bottom-1/2 left-0 right-0 top-1/2 -z-10 h-full w-full -translate-y-1/2 transform-gpu items-center justify-center overflow-hidden blur-3xl dark:opacity-70 sm:flex "
           aria-hidden="true"
         >
           <div
