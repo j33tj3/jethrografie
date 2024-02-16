@@ -18,6 +18,14 @@ const config: Config = {
       },
     },
   },
+  safelist: [
+    "-rotate-1",
+    "-rotate-2",
+    "-rotate-3",
+    "rotate-1",
+    "rotate-2",
+    "rotate-3",
+  ],
   plugins: [],
 };
 export default config;

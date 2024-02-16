@@ -20,10 +20,11 @@ export const HighlightsSlider = () => {
       <Swiper
         pagination
         slidesPerView={"auto"}
+        spaceBetween={12}
         centeredSlides={true}
         loop={true}
         modules={[Pagination]}
-        className="mySwiper mySwiper h-[600px] w-full !overflow-visible"
+        className="mySwiper mySwiper h-[600px] w-full !overflow-y-visible"
       >
         {imageList.map((e, i) => (
           <HighlightedSlide url={e.default.src} key={i} slide={i + 1} />

@@ -4,7 +4,7 @@ export const WelcomeSection = () => {
   return (
     <div className="flex justify-center px-4">
       <div className="flex w-full max-w-5xl flex-col items-center py-10 md:flex-row">
-        <div className="flex flex-col gap-y-6 border-4 border-black p-8 md:-mr-12 md:pr-16 ">
+        <div className="flex flex-col gap-y-6 border-4 border-black p-4 pb-8 md:-mr-12 md:p-8 md:pr-16 ">
           <h1 className="text-2xl font-bold">
             Jij of jouw <span className="italic">merk</span>? Dat is wat ik{" "}
             <span className="uppercase italic">versterk</span>!
@@ -20,7 +20,7 @@ export const WelcomeSection = () => {
             form.
           </p>
         </div>
-        <div className="hidden h-min shrink-0 border-8 border-black bg-white p-4 md:flex">
+        <div className=" -mt-6 h-min shrink-0 -rotate-1 border-8 border-black bg-white p-4 md:mt-0 md:rotate-1">
           <Image
             src={"/images/home/welcome/1.jpg"}
             width="480"
