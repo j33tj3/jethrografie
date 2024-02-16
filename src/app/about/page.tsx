@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
+import { twMerge } from "tailwind-merge";
 
 export default function AboutMePage() {
   return (
@@ -17,8 +18,9 @@ export default function AboutMePage() {
             <p className="relative text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
               Best creatief bedacht toch? En zo doe ik dat ook als ik de
               plaatjes aan het schieten ben achter mijn camera. Sinds vroeger al
-              foto's knutselen een analoge film camera en tegenwoordige de wat
-              meer serieuzere projectjes aan het doen met mijn systeem camera.
+              aan het knutselen met een analoge film camera en tegenwoordige de
+              wat meer serieuzere projectjes aan het doen met mijn systeem
+              camera.
             </p>
             <p className="relative text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
               Ik ben een familie man en woon met mijn gezin in Haarlem. Ik
@@ -57,11 +59,16 @@ type AboutImageProps = {
 
 const AboutImage: FC<AboutImageProps> = ({ number }) => {
   return (
-    <div className="border-4 border-black bg-white p-2">
+    <div className="">
       <Image
         src={`/images/home/highlights/${number}.jpg`}
         alt=""
-        className="aspect-[2/3] w-full bg-gray-900/5 object-cover shadow-lg"
+        className={twMerge(
+          "aspect-[2/3] w-full border-8 border-black bg-gray-900/5 bg-white object-cover p-2 shadow-lg",
+          `${Boolean(Math.round(Math.random())) ? "-" : ""}rotate-${Math.floor(
+            Math.random() * 3 + 1,
+          )}`,
+        )}
         width="176"
         height="264"
       />

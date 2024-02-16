@@ -9,6 +9,7 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --background-rgb: 255, 255, 255;
+  --swiper-pagination-color: black;
 }
 
 /* @media (prefers-color-scheme: dark) {1

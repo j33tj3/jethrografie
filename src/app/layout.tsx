@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Mohave } from "next/font/google";
 import "./globals.css";
-import { SplashSlider } from "@/components/home/SplashSlider";
 import { MainNavigation } from "@/components/ui/MainNavigation";
 import { Footer } from "@/components/ui/Footer";
+import { twMerge } from "tailwind-merge";
 
 const mohaveFonts = Mohave({
   weight: ["300", "400", "700"],
@@ -23,11 +23,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" style={{ height: "100%" }}>
-      <body className={mohaveFonts.className}>
-        <SplashSlider />
+    <html lang="en" className="h-full">
+      <body
+        className={twMerge(
+          mohaveFonts.className,
+          "flex h-screen flex-col overflow-auto",
+        )}
+      >
         <MainNavigation />
-        {children}
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>

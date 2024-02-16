@@ -7,7 +7,7 @@ export const LatestWork = () => {
       <h2 className="-mb-1 border-4 border-black p-4 text-2xl font-bold">
         laatste project
       </h2>
-      <div className="w-full max-w-3xl border-4 border-black p-4">
+      <div className="w-full max-w-3xl border-8 border-black p-4">
         <Image
           src="/images/home/latestwork/1.jpg"
           alt="Verloskundigen Praktijk Bijlmermeer"

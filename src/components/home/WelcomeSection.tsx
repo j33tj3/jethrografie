@@ -20,7 +20,7 @@ export const WelcomeSection = () => {
             form.
           </p>
         </div>
-        <div className="hidden h-min shrink-0 border-4 border-black bg-white p-4 md:flex">
+        <div className="hidden h-min shrink-0 border-8 border-black bg-white p-4 md:flex">
           <Image
             src={"/images/home/welcome/1.jpg"}
             width="480"
