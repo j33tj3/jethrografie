@@ -22,6 +22,8 @@ const config: Config = {
     "-rotate-1",
     "-rotate-2",
     "-rotate-3",
+    "-rotate-0",
+    "rotate-0",
     "rotate-1",
     "rotate-2",
     "rotate-3",

@@ -8,7 +8,6 @@ import Image from "next/image";
 export interface ProjectData {
   name: string;
   id: string;
-  description: string;
   images: ProjectImages[];
 }
 
@@ -22,7 +21,6 @@ export const ProjectsGallery = () => {
     <div className="grid gap-8 md:grid-cols-2">
       {projects.map((project: ProjectData, index: number) => {
         const { name, id } = project;
-        // console.log(project);
         console.log(name);
         return (
           <Link

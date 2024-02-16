@@ -1,12 +1,12 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { FC } from "react";
-import { Pagination } from "swiper/modules";
+import { FC, useEffect, useState } from "react";
 import "swiper/css";
-import "swiper/css/pagination";
 import { twMerge } from "tailwind-merge";
 import { rotateImage } from "@/utils/rotateImage";
+import { SwiperNavigation } from "../ui/SwiperNavigation";
 
 export const HighlightsSlider = () => {
   const images = require.context(
@@ -17,19 +17,23 @@ export const HighlightsSlider = () => {
   const imageList = images.keys().map((image) => images(image));
 
   return (
-    <div className="flex w-screen flex-col justify-center gap-y-12 py-12">
+    <div className="relative flex w-screen flex-col justify-center gap-y-12 py-12">
       <Swiper
-        pagination
         slidesPerView={"auto"}
-        spaceBetween={16}
+        spaceBetween={8}
         centeredSlides={true}
         loop={true}
-        modules={[Pagination]}
-        className="mySwiper mySwiper h-[600px] w-full !overflow-y-visible"
+        className="!flex w-full flex-wrap justify-center gap-4 !overflow-y-visible"
       >
         {imageList.map((e, i) => (
-          <HighlightedSlide url={e.default.src} key={i} slide={i + 1} />
+          <HighlightedSlide
+            url={e.default.src}
+            key={i}
+            slide={i + 1}
+            index={i}
+          />
         ))}
+        <SwiperNavigation />
       </Swiper>
     </div>
   );
@@ -38,21 +42,31 @@ export const HighlightsSlider = () => {
 type HighlightedSlideProps = {
   url: string;
   slide: number;
+  index: number;
 };
 
-const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide }) => {
+const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide, index }) => {
+  const [slideClass, setSlideClass] = useState<string>("");
+  useEffect(() => {
+    setSlideClass(
+      twMerge(
+        "border-8 border-black bg-white p-2  md:p-4 w-[280px] md:w-[400px]",
+        rotateImage(3),
+      ),
+    );
+  }, []);
   return (
     <SwiperSlide className="!w-auto">
-      <Image
-        src={url}
-        width={728}
-        height={1024}
-        alt={`${slide}`}
-        className={twMerge(
-          "block h-full w-auto border-8 border-black bg-white object-cover p-4",
-          rotateImage(3),
-        )}
-      />
+      <div>
+        <Image
+          src={url}
+          width={400}
+          height={600}
+          alt={`${slide}`}
+          priority={index === 0}
+          className={slideClass}
+        />
+      </div>
     </SwiperSlide>
   );
 };

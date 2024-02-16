@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 export const WelcomeSection = () => {
@@ -20,7 +22,7 @@ export const WelcomeSection = () => {
             form.
           </p>
         </div>
-        <div className=" -mt-6 h-min shrink-0 -rotate-1 border-8 border-black bg-white p-4 md:mt-0 md:rotate-1">
+        <div className=" -mt-6 h-min shrink-0 -rotate-1 border-8 border-black bg-white p-2 md:mt-0 md:rotate-1 md:p-4">
           <Image
             src={"/images/home/welcome/1.jpg"}
             width="480"
