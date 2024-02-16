@@ -17,7 +17,12 @@ export const SplashSlider = () => {
     return;
   }
 
-  const slideItems = 4;
+  const images = require.context(
+    "../../../public/images/home/splash",
+    true,
+    /\.(jpe?g)$/,
+  );
+  const imageList = images.keys().map((image) => images(image));
 
   const scrollToNav = () => {
     const navElement = document.getElementById("main-navigation");
@@ -41,8 +46,8 @@ export const SplashSlider = () => {
         modules={[Autoplay, EffectFade]}
         effect={"fade"}
       >
-        {[...Array(slideItems)].map((_item, index) => (
-          <SwiperItem slide={index + 1} key={index} />
+        {imageList.map((item, index) => (
+          <SwiperItem url={item.default.src} index={index + 1} key={index} />
         ))}
       </Swiper>
       <motion.button
@@ -76,17 +81,18 @@ export const SplashSlider = () => {
 };
 
 type SwiperItemProps = {
-  slide: number;
+  url: string;
+  index: number;
 };
 
-const SwiperItem: FC<SwiperItemProps> = ({ slide }) => {
+const SwiperItem: FC<SwiperItemProps> = ({ url, index }) => {
   return (
     <SwiperSlide className="h-full w-full">
       <Image
-        src={`/images/home/horizontal/${slide}.jpg`}
+        src={url}
         width={1920}
         height={1080}
-        alt={`${slide}`}
+        alt={`slide ${index}`}
         className="block h-full w-full object-cover"
       />
     </SwiperSlide>
