@@ -6,6 +6,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { twMerge } from "tailwind-merge";
+import { rotateImage } from "@/utils/rotateImage";
 
 export const HighlightsSlider = () => {
   const images = require.context(
@@ -20,7 +21,7 @@ export const HighlightsSlider = () => {
       <Swiper
         pagination
         slidesPerView={"auto"}
-        spaceBetween={12}
+        spaceBetween={16}
         centeredSlides={true}
         loop={true}
         modules={[Pagination]}
@@ -40,8 +41,6 @@ type HighlightedSlideProps = {
 };
 
 const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide }) => {
-  const randomRotate = Math.floor(Math.random() * 3 + 1);
-  const randomDirection = Boolean(Math.round(Math.random())) ? "-" : "";
   return (
     <SwiperSlide className="!w-auto">
       <Image
@@ -50,7 +49,8 @@ const HighlightedSlide: FC<HighlightedSlideProps> = ({ url, slide }) => {
         height={1024}
         alt={`${slide}`}
         className={twMerge(
-          `block h-full w-auto border-8 border-black bg-white object-cover p-4 ${randomDirection}rotate-${randomRotate}`,
+          "block h-full w-auto border-8 border-black bg-white object-cover p-4",
+          rotateImage(),
         )}
       />
     </SwiperSlide>

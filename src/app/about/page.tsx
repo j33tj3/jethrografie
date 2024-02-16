@@ -1,3 +1,4 @@
+import { rotateImage } from "@/utils/rotateImage";
 import Image from "next/image";
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";
@@ -65,9 +66,7 @@ const AboutImage: FC<AboutImageProps> = ({ number }) => {
         alt=""
         className={twMerge(
           "aspect-[2/3] w-full border-8 border-black bg-gray-900/5 bg-white object-cover p-2 shadow-lg",
-          `${Boolean(Math.round(Math.random())) ? "-" : ""}rotate-${Math.floor(
-            Math.random() * 3 + 1,
-          )}`,
+          rotateImage(),
         )}
         width="176"
         height="264"

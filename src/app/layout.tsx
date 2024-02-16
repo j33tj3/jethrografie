@@ -27,7 +27,7 @@ export default function RootLayout({
       <body
         className={twMerge(
           mohaveFonts.className,
-          "flex h-screen flex-col overflow-auto",
+          "flex h-screen flex-col overflow-auto dark:bg-black",
         )}
       >
         <MainNavigation />

@@ -24,3 +24,5 @@ export const ContactFormItem: React.FC<ContactFormItemProps> = React.forwardRef(
     );
   },
 );
+
+ContactFormItem.displayName = "ContactFormItem";
