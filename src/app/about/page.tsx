@@ -40,10 +40,7 @@ export default function AboutMePage() {
               </p>
               <p className="relative text-lg leading-8 sm:max-w-md lg:max-w-none">
                 Best creatief bedacht toch? En zo doe ik dat ook als ik de
-                plaatjes aan het schieten ben achter mijn camera. Sinds vroeger
-                al aan het knutselen met een analoge film camera en
-                tegenwoordige de wat meer serieuzere projectjes aan het doen met
-                mijn systeem camera.
+                plaatjes aan het schieten ben achter mijn camera. Of deze w.
               </p>
               <p className="relative text-lg leading-8 sm:max-w-md lg:max-w-none">
                 Ik ben een familie man en woon met mijn gezin in Haarlem. Ik
