@@ -2,6 +2,7 @@ import { ImageFrame } from "@/components/ui/ImageFrame";
 import { rotateImage } from "@/utils/rotateImage";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -39,19 +40,24 @@ export default function AboutMePage() {
                 IK HOU VAN <span className="font-bold italic">FOTOGRAFIE</span>!
               </p>
               <p className="relative text-lg leading-8 sm:max-w-md lg:max-w-none">
-                Best creatief bedacht toch? En zo doe ik dat ook als ik de
-                plaatjes aan het schieten ben achter mijn camera. Of deze w.
+                Best creatief bedacht toch 👨🏽‍🎨? En zo doe ik dat ook als ik de
+                plaatjes aan het schieten ben achter mijn camera 📸.
               </p>
               <p className="relative text-lg leading-8 sm:max-w-md lg:max-w-none">
-                Ik ben een familie man en woon met mijn gezin in Haarlem. Ik
+                Ik ben een familie man en woon met mijn gezin in Haarlem 🏡. Ik
                 gedraag me af en toe speelser dan mijn kinderen en daar schaam
-                ik me absoluut niet voor. Want juist dat gebruik ik om het beeld
-                te creëren die ik voor mijn ogen hebt.
+                ik me absoluut niet voor 🙈. Want juist dat gebruik ik om het
+                beeld te creëren die ik voor mijn ogen hebt.
               </p>
               <p className="relative text-lg leading-8 sm:max-w-md lg:max-w-none">
                 Zoek jij een fotograaf die speels en creatief is en kan de shoot
-                na kantoor uren of in het weekend? Neem dan gerust contact met
-                mij op en misschien kunnen wij samen iets tofs neer zetten!
+                na kantoor uren of in het weekend? Neem dan gerust{" "}
+                <Link href="/contact" className="underline">
+                  {" "}
+                  contact
+                </Link>{" "}
+                📧 met mij op en misschien kunnen wij samen iets tofs neer
+                zetten!
               </p>
             </div>
             <div className=" mt-8 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-[192px] lg:mt-0 lg:pl-0">

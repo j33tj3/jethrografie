@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ImageFrame } from "../ui/ImageFrame";
+import Link from "next/link";
 
 export const WelcomeSection = () => {
   return (
@@ -14,13 +15,16 @@ export const WelcomeSection = () => {
           </h1>
           <p className="text-xl font-light">
             Wel met plaatjes natuurlijk. Want als{" "}
-            <span className="font-normal">fotograaf</span> kan ik je helpen met
-            een sfeershoot van jou, product of onderneming. Een
-            <span className="font-normal"> bedrijfsreportage</span> met oog voor
-            het <span className="italic">ambacht</span>. Altijd handig om te
-            hebben voor je socials en prints. Kijk maar even rond en anders
-            connecten we via de <>Link</>
-            form.
+            <span className="font-normal italic">fotograaf</span> kan ik je
+            helpen met een sfeershoot van jou, product of onderneming. Een
+            <span className="font-normal italic"> bedrijfsreportage</span> met
+            oog voor het <span className="italic">ambacht</span>. Altijd handig
+            om te hebben voor je socials en prints. Kijk maar even rond en
+            anders connecten we via de{" "}
+            <Link href="/contact" className="underline">
+              contact formulier
+            </Link>
+            .
           </p>
         </div>
         <ImageFrame className="-mt-6 h-min shrink-0 -rotate-1 md:mt-0 md:rotate-1">
