@@ -2,8 +2,9 @@ import { ProjectImageGrid } from "@/components/projects/ProjectImageGrid";
 import { ProjectImageSwiper } from "@/components/projects/ProjectImageSwiper";
 import { SingleProjectImages } from "@/components/projects/SIngleProjectImages";
 import { projects } from "@/data/projectsData";
+import { MetaHTMLAttributes } from "react";
 
-export async function generateMetadata({ params }: { params: any }) {
+export async function generateMetadata({ params }: { params: { id: string } }) {
   const pageData = projects.find((obj) => {
     return (obj.id = params.id);
   });
