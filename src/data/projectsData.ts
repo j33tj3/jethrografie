@@ -1,43 +1,5 @@
 export const projects = [
   {
-    id: "preggylicious",
-    name: "Preggylicious",
-    images: [
-      { file: "1", horizontal: false },
-      { file: "2", horizontal: false },
-    ],
-  },
-  {
-    id: "apceramics",
-    name: "Abel Pepping Ceramics",
-    images: [
-      { file: "R78A7966", horizontal: false },
-      { file: "R78A7976", horizontal: true },
-      { file: "R78A7984", horizontal: false },
-      { file: "R78A7991", horizontal: false },
-      { file: "R78A8014", horizontal: false },
-      { file: "R78A8029", horizontal: false },
-      { file: "R78A8037", horizontal: true },
-      { file: "R78A8108", horizontal: false },
-      { file: "R78A8113", horizontal: false },
-      { file: "R78A8136", horizontal: false },
-      { file: "R78A8140", horizontal: true },
-    ],
-  },
-  {
-    id: "fcvandams",
-    name: "Fighting Club van Dams",
-    images: [
-      { file: "R78A8560", horizontal: true },
-      { file: "R78A8653", horizontal: false },
-      { file: "R78A8761", horizontal: true },
-      { file: "R78A8970", horizontal: false },
-      { file: "R78A9118", horizontal: true },
-      { file: "R78A9245", horizontal: false },
-      { file: "R78A9254", horizontal: false },
-    ],
-  },
-  {
     id: "vpbijlmermeer",
     name: "Verloskundigenpraktijk Bijlmermeer",
     images: [
@@ -59,6 +21,59 @@ export const projects = [
       { file: "R78A9813", horizontal: true },
       { file: "R78A9845", horizontal: true },
       { file: "R78A9848", horizontal: true },
+    ],
+  },
+  {
+    id: "fcvandams",
+    name: "Fighting Club van Dams",
+    images: [
+      { file: "R78A8560", horizontal: true },
+      { file: "R78A8653", horizontal: false },
+      { file: "R78A8761", horizontal: true },
+      { file: "R78A8970", horizontal: false },
+      { file: "R78A9118", horizontal: true },
+      { file: "R78A9245", horizontal: false },
+      { file: "R78A9254", horizontal: false },
+    ],
+  },
+  {
+    id: "apceramics",
+    name: "Abel Pepping Ceramics",
+    images: [
+      { file: "R78A7966", horizontal: false },
+      { file: "R78A7976", horizontal: true },
+      { file: "R78A7984", horizontal: false },
+      { file: "R78A7991", horizontal: false },
+      { file: "R78A8014", horizontal: false },
+      { file: "R78A8029", horizontal: false },
+      { file: "R78A8037", horizontal: true },
+      { file: "R78A8108", horizontal: false },
+      { file: "R78A8113", horizontal: false },
+      { file: "R78A8136", horizontal: false },
+      { file: "R78A8140", horizontal: true },
+    ],
+  },
+  {
+    id: "preggylicious",
+    name: "Preggylicious",
+    images: [
+      { file: "1", horizontal: false },
+      { file: "2", horizontal: false },
+    ],
+  },
+  {
+    id: "beautybyyess",
+    name: "beauty By Yess",
+    images: [
+      { file: "R78A3248", horizontal: true },
+      { file: "R78A3288", horizontal: false },
+      { file: "R78A3340", horizontal: false },
+      { file: "R78A3398", horizontal: false },
+      { file: "R78A3416", horizontal: false },
+      { file: "R78A3432", horizontal: false },
+      { file: "R78A3445", horizontal: true },
+      { file: "R78A3448", horizontal: true },
+      { file: "R78A3453", horizontal: false },
     ],
   },
 ];
