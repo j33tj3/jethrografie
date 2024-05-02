@@ -19,11 +19,12 @@ export const LatestWork = () => {
           className="h-auto w-full"
         />
       </ImageFrame>
-      <div className="-mt-1 border-4 border-black bg-white p-2 text-xl font-bold uppercase dark:border-white dark:bg-black md:p-4 md:text-2xl">
-        <Link href="/projects/vpbijlmermeer">
-          Verloskundigenpraktijk Bijlmermeer
-        </Link>
-      </div>
+      <Link
+        className="-mt-1 flex border-4 border-black bg-white p-2 text-xl font-bold uppercase hover:underline dark:border-white dark:bg-black md:p-4 md:text-2xl"
+        href="/projects/vpbijlmermeer"
+      >
+        Verloskundigenpraktijk Bijlmermeer
+      </Link>
     </div>
   );
 };

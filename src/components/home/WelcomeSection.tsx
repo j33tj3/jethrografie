@@ -21,18 +21,19 @@ export const WelcomeSection = () => {
             oog voor het <span className="italic">ambacht</span>. Altijd handig
             om te hebben voor je socials en prints. Kijk maar even rond en
             anders connecten we via de{" "}
-            <Link href="/contact" className="underline">
+            <Link href="/contact" className="underline hover:font-bold">
               contact formulier
             </Link>
             .
           </p>
         </div>
-        <ImageFrame className="-mt-6 h-min shrink-0 -rotate-1 md:mt-0 md:rotate-1">
+        <ImageFrame className="-mt-6 h-min w-3/4 shrink-0 -rotate-1 sm:w-2/3 md:mt-0 md:w-1/2 md:rotate-1 lg:w-auto">
           <Image
             src={"/images/home/welcome/1.jpg"}
             width="480"
             height="320"
             alt={""}
+            className=""
           />
         </ImageFrame>
       </div>
