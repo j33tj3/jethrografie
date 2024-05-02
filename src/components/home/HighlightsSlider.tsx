@@ -18,7 +18,7 @@ const imageList = images.keys().map((image) => images(image));
 
 export const HighlightsSlider = () => {
   return (
-    <div className="relative flex w-screen flex-col justify-center gap-y-12 py-12">
+    <div className="relative flex w-screen flex-col justify-center gap-y-12">
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={8}

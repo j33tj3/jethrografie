@@ -52,7 +52,7 @@ export default function RootLayout({
         )}
       >
         <MainNavigation />
-        <main className="grow">{children}</main>
+        <main className="grow pb-12 pt-4 md:pb-20 md:pt-12">{children}</main>
         <Footer />
       </body>
     </html>

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ContactMePage() {
   return (
     <div className="flex justify-center px-4">
-      <div className="flex w-full max-w-5xl gap-x-9 py-12">
+      <div className="flex w-full max-w-5xl gap-x-9">
         <div className="mt-7 hidden -rotate-1 md:block md:basis-1/2">
           <ImageFrame>
             <Image

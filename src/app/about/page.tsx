@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 export default function AboutMePage() {
   return (
     <>
-      <div className=" px-4">
-        <div className="mx-auto max-w-5xl pb-32 pt-12">
+      <div className="px-4">
+        <div className="mx-auto max-w-5xl">
           {/* background stains - start */}
           <div
             className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 hidden transform-gpu overflow-hidden blur-3xl dark:opacity-60 lg:ml-16 xl:ml-20"

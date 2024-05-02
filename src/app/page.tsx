@@ -19,10 +19,11 @@ export default function Home() {
         />
       </div>
       {/* background stains - end */}
-
-      <HighlightsSlider />
-      <WelcomeSection />
-      <LatestWork />
+      <div className="flex flex-col gap-12">
+        <HighlightsSlider />
+        <WelcomeSection />
+        <LatestWork />
+      </div>
 
       {/* background stains - start */}
       <div

@@ -7,7 +7,7 @@ import Link from "next/link";
 export const WelcomeSection = () => {
   return (
     <div className="flex justify-center px-4">
-      <div className="flex w-full max-w-5xl flex-col items-center py-10 md:flex-row">
+      <div className="flex w-full max-w-5xl flex-col items-center md:flex-row">
         <div className="flex flex-col gap-y-6 border-4 border-black bg-white p-4 pb-8 dark:border-white dark:bg-black md:-mr-12 md:p-8 md:pr-16 ">
           <h1 className="text-2xl font-bold">
             Jij of jouw <span className="italic">merk</span>? Dat is wat ik{" "}
