@@ -70,6 +70,6 @@ const MotionWrapper = ({
   children,
 }: {
   condition: boolean;
-  wrapper: (children: React.ReactElement) => React.ReactElement;
+  wrapper: (_children: React.ReactElement) => React.ReactElement;
   children: React.ReactElement;
 }) => (condition ? wrapper(children) : children);

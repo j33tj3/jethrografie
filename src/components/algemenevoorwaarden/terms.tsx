@@ -158,7 +158,7 @@ const TermsListOrdered = ({ children }: { children: ReactNode }) => {
   return <ol className="list-decimal pl-6 [&+ul]:ml-6">{children}</ol>;
 };
 
-const TermsListUnordered = ({ children }: { children: ReactNode }) => {
+const _TermsListUnordered = ({ children }: { children: ReactNode }) => {
   return <ul className="list-disc pl-6">{children}</ul>;
 };
 

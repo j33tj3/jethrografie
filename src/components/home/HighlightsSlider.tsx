@@ -2,9 +2,8 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import "swiper/css";
-import { twMerge } from "tailwind-merge";
 import { rotateImage } from "@/utils/rotateImage";
 import { SwiperNavigation } from "../ui/SwiperNavigation";
 import { ImageFrame } from "../ui/ImageFrame";

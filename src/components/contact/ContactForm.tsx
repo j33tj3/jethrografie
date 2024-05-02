@@ -31,9 +31,6 @@ export const ContactForm: React.FC<ContactFormProps> = ({ className }) => {
     formState: { errors, isSubmitSuccessful },
   } = useForm<FormData>();
 
-  const formInputStyles =
-    "w-full rounded-es-lg border-2 border-gray-700 bg-white px-6 py-3 text-base font-medium text-black outline-none focus:shadow-md focus:outline-4";
-
   function onSubmit(data: FormData) {
     sendEmail(data);
   }
