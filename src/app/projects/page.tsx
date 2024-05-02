@@ -2,7 +2,7 @@ import { AllProjectsGallery } from "@/components/projects/AllProjectsGallery";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jethrografie - Projecten",
+  title: "Projecten van",
 };
 
 export default function ProjectsPage() {

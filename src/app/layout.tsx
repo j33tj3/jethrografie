@@ -13,7 +13,10 @@ const mohaveFonts = Mohave({
 });
 
 export const metadata: Metadata = {
-  title: "Jethrografie",
+  title: {
+    template: "%s Jethrografie",
+    default: "Jethrografie",
+  },
   description: "Portfolio van Jethrografie",
   icons: {
     icon: [

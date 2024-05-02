@@ -1,16 +1,17 @@
-import { ProjectImageGrid } from "@/components/projects/ProjectImageGrid";
-import { ProjectImageSwiper } from "@/components/projects/ProjectImageSwiper";
 import { SingleProjectImages } from "@/components/projects/SIngleProjectImages";
 import { projects } from "@/data/projectsData";
-import { MetaHTMLAttributes } from "react";
+import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { id: string };
+}): Promise<Metadata> {
   const pageData = projects.find((obj) => {
-    return (obj.id = params.id);
+    return obj.id === params.id;
   });
-  // fix any
   return {
-    title: `Jethrografie - Project: ${pageData?.name}`,
+    title: `${pageData?.name} |`,
   };
 }
 
@@ -22,7 +23,7 @@ export async function generateStaticParams() {
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const pageData = projects.find((obj) => {
-    return (obj.id = params.id);
+    return obj.id === params.id;
   });
 
   if (!pageData) {

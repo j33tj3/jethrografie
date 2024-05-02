@@ -7,7 +7,7 @@ import { FC } from "react";
 import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
-  title: "Jethrografie - Over mij",
+  title: "Over",
 };
 
 export default function AboutMePage() {

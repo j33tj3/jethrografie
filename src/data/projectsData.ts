@@ -1,4 +1,4 @@
-export const projects = [
+export const projects: ProjectData[] = [
   {
     id: "vpbijlmermeer",
     name: "Verloskundigenpraktijk Bijlmermeer",
@@ -77,12 +77,6 @@ export const projects = [
     ],
   },
 ];
-
-export const projectIds = projects.find((obj) => {
-  // return (obj.id = params.id);
-});
-
-export type Projects = typeof projectIds;
 
 export interface ProjectData {
   name: string;
