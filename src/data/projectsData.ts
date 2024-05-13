@@ -37,8 +37,8 @@ export const projects: ProjectData[] = [
     ],
   },
   {
-    id: "apceramics",
-    name: "Abel Pepping Ceramics",
+    id: "ikkaiceramics",
+    name: "Ikkai Ceramics",
     images: [
       { file: "R78A7966", horizontal: false },
       { file: "R78A7976", horizontal: true },

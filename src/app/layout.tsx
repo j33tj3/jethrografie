@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     template: "%s Jethrografie",
     default: "Jethrografie",
   },
+  openGraph: {
+    type: "website",
+    locale: "nl_NL",
+    url: "https://jethrografie.nl",
+    siteName: "Jethrografie",
+    title: "Jethrografie",
+    description: "Portfolio van Jethrografie",
+  },
   description: "Portfolio van Jethrografie",
   icons: {
     icon: [
